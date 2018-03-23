@@ -8,11 +8,6 @@
 	background-color: #d4d4d4;
 }
 
-window {
-	transition-property: pageOffsetY;
-	transition-duration: .5s;
-}
-
 /*----------------------[Header]----------------------*/
 header.landleg {
 	text-align: center;
