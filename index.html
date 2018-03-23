@@ -18,6 +18,27 @@
     </head>
 
     <body>
+    	<div id="sideMenuBG">
+    		<aside id="sideMenu">
+    			<ul class="list sideMenu">
+					<a href="#" target="_blank">
+						<li><i class="fas fa-home"></i> Home</li>
+					</a>
+					<a href="#" target="_blank">
+						<li><i class="fas fa-users"></i> Sellers</li>
+					</a>
+					<a href="javascript:void(0)">
+						<li id="contactModalOpenBtn"><i class="fas fa-envelope"></i> Contact us</li>
+					</a>
+					<a href="javascript:void(0)">
+						<li id="aboutBtn"><i class="fas fa-info-circle"></i> About</li>
+					</a>
+					<a href="javascript:void(0)">
+						<li id="sideMenuCloseBtn"><i class="fas fa-times"></i> Close</li>
+					</a>
+				</ul>
+    		</aside>
+    	</div>
 		<div class="modalBG" id="loginModalBG">
 			<div class="fold fold-light" id="loginModalBG">
 				<div class="fold-header">
@@ -54,16 +75,19 @@
         </header>
         <nav id="navbar" class="navbar dark">
         	<ul class="navitems">
-        		<a href="#" target="_blank">
+        		<a href="javascript:void(0)">
+        			<li id="burgerBtn" class="navitem"><i class="fas fa-bars fa-lg"></i></li>
+        		</a>
+        		<a href="#" target="_blank" class="primaryItem">
         			<li class="navitem"><i class="fas fa-home fa-lg"></i></li>
         		</a>
-        		<a href="#" target="_blank">
+        		<a href="#" target="_blank" class="primaryItem">
         			<li class="navitem">Sellers</li>
         		</a>
-        		<a href="javascript:void(0)" target="_blank">
+        		<a href="javascript:void(0)" class="primaryItem">
         			<li class="navitem" id="contactModalOpenBtn">Contact us</li>
         		</a>
-        		<a href="javascript:void(0)">
+        		<a href="javascript:void(0)" class="primaryItem">
         			<li class="navitem" id="aboutBtn">About</li>
         		</a>
         		<a href="#" target="_blank">
@@ -358,7 +382,8 @@
        	 	</div>
         </footer>
         
-        <script type="text/javascript" src="scripts/main.js"></script>
         <script type="text/javascript" src="scripts/modal.js"></script>
+        <script type="text/javascript" src="scripts/sideMenu.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
     </body>
 </html>

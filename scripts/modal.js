@@ -48,7 +48,7 @@ window.addEventListener('load', function() {
 		e.preventDefault();
 	});
 	
-	function openModal(modalBG) {
+	function openModal(modalBG) {		
 		modalBG.style.top = '0px';
 		modalBG.style.display = 'block';
 		document.body.style.overflowY = 'hidden';
