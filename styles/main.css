@@ -5,14 +5,13 @@
 
 *::selection {
 	color: var(--darkColor);
-	background-color: #d4d4d4;
+	background-color: var(--darkColorWeak);
 }
 
 /*----------------------[Header]----------------------*/
 header.landleg {
 	text-align: center;
 	padding: 100px 50px;
-	
 }
 
 header.landleg h1 {
@@ -24,7 +23,7 @@ header.landleg h1 {
 
 header.landleg small {
 	font-size: 13px;
-	color: var(--secondaryColor);
+	color: var(--grayColor);
 }
 
 /*----------------------[Navbar]----------------------*/
@@ -131,7 +130,6 @@ div.modalBG {
 div.modalBG div.fold {
 	margin: 200px auto;
 	width: 500px;
-	border: none;
 	animation-name: modalSlide;
 	animation-duration: .5s;
 }
@@ -141,14 +139,15 @@ div.modalBG div.fold div.fold-header h4 {
 	display: inline-block;
 }
 
-div.modalBG div.fold div.fold-header i.fas.fa-times {
+#loginModalCloseBtn, #contactModalCloseBtn {
 	float: right;
 	cursor: pointer;
+	font-size: 30px;
 	transition-property: color;
 	transition-duration: .3s;
 }
 
-div.modalBG div.fold div.fold-header i.fas.fa-times:hover { color: #141414; }
+div.modalBG div.fold div.fold-header i.fas.fa-times:hover { color: var(--darkColorLighten); }
 
 form.loginForm, form.contactForm {
 	width: 100%;
@@ -156,7 +155,7 @@ form.loginForm, form.contactForm {
 }
 
 form.loginForm input, form.contactForm input, form.contactForm textarea {
-	width: 93%;
+	width: 94.5%;
 	margin: 5px auto;
 }
 
@@ -180,6 +179,7 @@ footer {
 }
 
 footer .fold.creatorCard {
+	flex: 1px;
 	margin-top: 20px;
 	font-size: 16px;
 	background-color: rgba(25, 32, 38, 0.6);
@@ -194,7 +194,7 @@ footer .fold.creatorCard:not(:last-child) { margin-right: 150px; }
 p#copyRight {
 	margin-top: 10px;
 	text-align: center;
-	color: var(--secondaryColor);
+	color: var(--grayColor);
 	font-size: 12px;
 }
 
@@ -215,7 +215,7 @@ footer .fold.creatorCard ul.list a li {
 	transition-duration: .5s;
 }
 
-footer .fold.creatorCard ul.list a li:hover { color: var(--primaryColor); }
+footer .fold.creatorCard ul.list a li:hover { color: var(--blueColor); }
 
 /*--------------------[Aniamations]--------------------*/
 @keyframes scrollBtnSlide {
@@ -252,7 +252,9 @@ footer .fold.creatorCard ul.list a li:hover { color: var(--primaryColor); }
 	
 	nav ul a li#burgerBtn { display: block; };
 	
-	footer .fold.creatorCard { width: 100%; }
+	footer #creatorCards { flex-direction: column; }
+	
+	footer .fold.creatorCard { width: 89%; }
 	
 	footer div.flex { display: block; }
 	

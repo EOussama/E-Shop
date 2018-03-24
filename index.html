@@ -40,32 +40,32 @@
     		</aside>
     	</div>
 		<div class="modalBG" id="loginModalBG">
-			<div class="fold fold-light" id="loginModalBG">
+			<div class="fold light" id="loginModalBG">
 				<div class="fold-header">
-					<h4><i class="fas fa-sign-in-alt"></i> Login</h4>
-					<i class="fas fa-times" id="loginModalCloseBtn"></i>
+					<h4 class="lead"><i class="fas fa-sign-in-alt"></i> Login</h4>
+					<i class="fas fa-times fa-lg" id="loginModalCloseBtn"></i>
 				</div>
 				<form id="loginForm" class="loginForm">
-					<input type="text" name="username" class="textbox textbox-primary" placeholder="Username" maxlength="25" required >
-					<input type="password" name="password" class="textbox textbox-primary" placeholder="Password" minlength="8" maxlength="30" required >
-					<input type="submit" value="Login" class="btn btn-primary">
-					<input type="reset" value="Clear" class="btn btn-secondary">
+					<input type="text" name="username" class="textbox blue xl" placeholder="Username" maxlength="25" required >
+					<input type="password" name="password" class="textbox blue xl" placeholder="Password" minlength="8" maxlength="30" required >
+					<input type="submit" value="Login" class="btn blue">
+					<input type="reset" value="Clear" class="btn gray">
 				</form>
 			</div>
 		</div>
        
        	<div class="modalBG" id="contactModalBG">
-			<div class="fold fold-light" id="contactModalBG">
+			<div class="fold light" id="contactModalBG">
 				<div class="fold-header">
-					<h4><i class="fas fa-envelope"></i> Contact us</h4>
-					<i class="fas fa-times" id="contactModalCloseBtn"></i>
+					<h4 class="lead"><i class="fas fa-envelope"></i> Contact us</h4>
+					<i class="fas fa-times fa-lg" id="contactModalCloseBtn"></i>
 				</div>
 				<form id="contactForm" class="contactForm">
-					<input type="text" class="textbox textbox-primary" placeholder="Username" maxlength="25" required >
-					<input type="text" class="textbox textbox-primary" placeholder="Subject" maxlength="30" required >
-					<textarea class="textbox textbox-primary" placeholder="Message" maxlength="500" required></textarea>
-					<input type="submit" value="Send" class="btn btn-primary">
-					<input type="reset" value="Clear" class="btn btn-secondary">
+					<input type="text" class="textbox blue xl" placeholder="Username" maxlength="25" required >
+					<input type="text" class="textbox blue xl" placeholder="Subject" maxlength="30" required >
+					<textarea class="textbox blue xl" placeholder="Message" maxlength="500" required></textarea>
+					<input type="submit" value="Send" class="btn blue">
+					<input type="reset" value="Clear" class="btn gray">
 				</form>
 			</div>
 		</div>
@@ -104,7 +104,7 @@
         <main>
         	<div class="container">
         		<div id="scrollBtn"><i class="fas fa-angle-up fa-lg"></i></div>
-        		<p>Velit quibusdam nam cohaerescant. Laboris lorem duis in cillum, nam cillum 
+        		<p class="indent">Velit quibusdam nam cohaerescant. Laboris lorem duis in cillum, nam cillum 
 					singulis ullamco. Quorum relinqueret expetendis quem mentitum ne te hic 
 					imitarentur non a legam aut quorum quo ita ubi noster labore culpa. Ubi dolor 
 					arbitrantur, appellat quo officia, non fore cernantur tempor, sed ita malis 
@@ -215,7 +215,7 @@
 					pariatur quis eiusmod ad iis ea sunt litteris, amet consectetur singulis varias 
 					pariatur iis legam possumus officia et singulis quae aliqua arbitror sint.</p>
         		<br>
-				<p>Velit quibusdam nam cohaerescant. Laboris lorem duis in cillum, nam cillum 
+				<p class="indent">Velit quibusdam nam cohaerescant. Laboris lorem duis in cillum, nam cillum 
 					singulis ullamco. Quorum relinqueret expetendis quem mentitum ne te hic 
 					imitarentur non a legam aut quorum quo ita ubi noster labore culpa. Ubi dolor 
 					arbitrantur, appellat quo officia, non fore cernantur tempor, sed ita malis 
@@ -351,7 +351,7 @@
         		</div>
         		<hr><br>
 				<h2><i class="fas fa-user"></i> Creators</h2>
-				<div class="flex">
+				<div id="creatorCards" class="flex">
 					<div class="fold creatorCard">
 						<h3>Redouan Andalousi</h3>
 						<ul class="list">
