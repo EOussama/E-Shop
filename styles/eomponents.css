@@ -192,7 +192,7 @@
 
 /*Blue button*/
 .btn.blue {
-	color: var(--lightColor);
+	color: white;
 	background-color: var(--blueColor);
 	box-shadow: 0px 2px 0.7px var(--blueColorDarken);
 }
@@ -226,7 +226,7 @@
 
 /*Green button*/
 .btn.green {
-	color: var(--lightColor);
+	color: white;
 	background-color: var(--greenColor);
 	box-shadow: 0px 2px 0.7px var(--greenColorDarken);
 }
@@ -380,6 +380,7 @@
 
 /*---------------------[Textboxes]---------------------*/
 .textbox {
+	box-sizing: border-box;
 	width: 200px;
 	margin: 3px;
 	padding: 3px 6px;
@@ -499,8 +500,6 @@ input[type="search"]::-webkit-search-cancel-button {
 	cursor: pointer;
 }
 
-/*-----------------------------[Date]------------------------------*/
-
 /*-------------------------[Color picker]--------------------------*/
 input[type="color"] {
 	outline: none;
@@ -513,6 +512,185 @@ input[type="color"] {
 }
 
 input[type="color"]:hover { background-color: var(--lightColorLighten); }
+
+/*---------------------------[Combobox]----------------------------*/
+select.combobox {
+	box-sizing: border-box;
+	width: 200px;
+	margin: 3px;
+	padding: 3px 6px;
+	font-size: 16px;
+	border: 0.5px solid darkgray;
+	border-radius: 2px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+	transition-property: border-color, background-color;
+	transition-duration: .5s;
+	outline: none;
+}
+
+select.combobox.light { background-color: var(--lightColor); }
+
+select.combobox.dark {
+	color: var(--lightColor);
+	background-color: var(--darkColor);
+}
+
+select.combobox.blue {
+	color: white;
+	background-color: var(--blueColor);
+}
+
+select.combobox.gray {
+	color: white;
+	background-color: var(--grayColor);
+}
+
+select.combobox.green {
+	color: white;
+	background-color: var(--greenColor);
+}
+
+select.combobox.aqua {
+	color: white;
+	background-color: var(--aquaColor);
+}
+
+select.combobox.yellow {
+	color: white;
+	background-color: var(--yellowColor);
+}
+
+select.combobox.orange {
+	color: white;
+	background-color: var(--orangeColor);
+}
+
+select.combobox.red {
+	color: white;
+	background-color: var(--redColor);
+}
+
+select.combobox.pink {
+	color: white;
+	background-color: var(--pinkColor);
+}
+
+select.combobox.violet {
+	color: white;
+	background-color: var(--violetColor);
+}
+
+select.combobox.brown {
+	color: white;
+	background-color: var(--brownColor);
+}
+
+
+select.combobox:disabled {
+	color: var(--disabledColorDarken);
+	background-color: var(--disabledColor);
+	cursor: not-allowed;
+}
+
+/*Combobox sizes*/
+select.combobox.xl {
+	padding: 8px 10px;
+	font-size: 20px;
+}
+
+select.combobox.lg {
+	padding: 6px 8px;
+	font-size: 18px;
+}
+
+select.combobox.md {
+	padding: 3px 6px;
+	font-size: 16px;
+}
+
+select.combobox.sm {
+	padding: 3px 4px;
+	font-size: 14px;
+}
+
+select.combobox.xm {
+	padding: 3px 4px;
+	font-size: 12px;
+}
+
+/*---------------------------[Checkbox]----------------------------*/
+label.checkbox input { display: none; }
+
+label.checkbox input:checked + div.inner { background-color: var(--lightColorStrong); }
+
+label.checkbox div.inner {
+	position: relative;
+	top: 4px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 3px;
+	background-color: var(--lightColor);
+	cursor: pointer;
+	transition-property: background-color;
+	transition-duration: .5s;
+
+}
+
+label.checkbox input:disabled + div.inner {
+	background-color: var(--disabledColor);
+	cursor: not-allowed;
+}
+
+label.checkbox.dark input:checked + div.inner { background-color: var(--darkColorLighten); }
+
+label.checkbox.blue input:checked + div.inner { background-color: var(--blueColorLighten); }
+
+label.checkbox.gray input:checked + div.inner { background-color: var(--grayColorLighten); }
+
+label.checkbox.gray input:checked + div.inner { background-color: var(--grayColorLighten); }
+
+label.checkbox.green input:checked + div.inner { background-color: var(--greenColorLighten); }
+
+label.checkbox.aqua input:checked + div.inner { background-color: var(--aquaColorLighten); }
+
+label.checkbox.yellow input:checked + div.inner { background-color: var(--yellowColorLighten); }
+
+label.checkbox.red input:checked + div.inner { background-color: var(--redColorLighten); }
+
+label.checkbox.orange input:checked + div.inner { background-color: var(--orangeColorLighten); }
+
+label.checkbox.pink input:checked + div.inner { background-color: var(--pinkColorLighten); }
+
+label.checkbox.violet input:checked + div.inner { background-color: var(--violetColorLighten); }
+
+label.checkbox.brown input:checked + div.inner { background-color: var(--brownColorLighten); }
+
+/*Checkbox sizing*/
+label.checkbox.xl div.inner {
+	width: 30px;
+	height: 30px;
+}
+
+label.checkbox.lg div.inner {
+	width: 25px;
+	height: 25px;
+}
+
+label.checkbox.md div.inner {
+	width: 20px;
+	height: 20px;
+}
+
+label.checkbox.sm div.inner {
+	width: 18px;
+	height: 18px;
+}
+
+label.checkbox.xm div.inner {
+	width: 15px;
+	height: 15px;
+}
 
 /*-----------------------------[Kbd]-------------------------------*/
 kbd {
@@ -1436,3 +1614,12 @@ nav.navbar.fixed {
 }
 
 nav.navbar.fixed + header { margin-top: 50px; }
+
+/*-------------------------[Forms]--------------------------*/
+form.from-group {
+	width: 100%;
+}
+
+form.form-group input.form-control, form.form-group select.form-control, form.form-group textarea.form-control {
+	width: 100%;
+}
