@@ -53,14 +53,8 @@
        	 	</div>
         </footer>
         
-<<<<<<< HEAD
         <script type="text/javascript" src="\E-Shop\scripts\modal.js"></script>
         <script type="text/javascript" src="\E-Shop\scripts\sideMenu.js"></script>
         <script type="text/javascript" src="\E-Shop\scripts\main.js"></script>
-=======
-        <script type="text/javascript" src="scripts/modal.js"></script>
-        <script type="text/javascript" src="scripts/sideMenu.js"></script>
-        <script type="text/javascript" src="scripts/main.js"></script>
->>>>>>> 48d552299eb2193f0eb1911fc2e6948c4c87e471
     </body>
 </html>
