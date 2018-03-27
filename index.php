@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
 	require 'pages/header.php';
 ?>        
@@ -60,8 +59,3 @@
 <?php 
 	require 'pages/footer.php';
 ?> 
-=======
-        <main class="container">
-  			
-        </main>
->>>>>>> 48d552299eb2193f0eb1911fc2e6948c4c87e471
