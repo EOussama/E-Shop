@@ -29,6 +29,10 @@ CREATE TABLE `Products`(
     `sellerid` MEDIUMINT(5) NOT NULL,
     `price` FLOAT NOT NULL,
     `label` NVARCHAR(30) NOT NULL,
+<<<<<<< HEAD
+	`category` NVARCHAR(30) NOT NULL,
+=======
+>>>>>>> 48d552299eb2193f0eb1911fc2e6948c4c87e471
     `description` NVARCHAR(150) NOT NULL,
     `photo` NVARCHAR(50) NOT NULL,
     `stock` MEDIUMINT(5) NOT NULL,
