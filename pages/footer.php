@@ -49,7 +49,14 @@
 					</div>
 				</div>
      	 		<br><hr style="margin-top: 10px;">
-      	 		<p id="copyRight">All rights reserved &copy; 2018</p>
+      	 		<p id="copyRight">
+      	 			All rights reserved &copy;
+      	 			<?php
+						$year = date('Y');
+						$output = ($year != '2018') ? "2018 - $year" : $year;
+						echo $output;
+					?>
+      	 		</p>
        	 	</div>
         </footer>
         

@@ -3,9 +3,14 @@
     padding: 0;
 }
 
-*::selection {
-	color: var(--darkColor);
+*:not(footer)::selection {
+	color: var(--darkColorStrong);
 	background-color: var(--darkColorWeak);
+}
+
+footer *::selection {
+	color: var(--darkColorStrong);
+	background-color: var(--lightColor);
 }
 
 /*----------------------[Header]----------------------*/

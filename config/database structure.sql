@@ -42,7 +42,7 @@ CREATE TABLE `Products`(
     CONSTRAINT ck_stock CHECK(`stock` > 0)
 );
 
-INSERT INTO `Products`(`sellerid`, `price`, `label`, `description`, `photo`, `stock`) VALUES(1, 15.12, 'iPhone 5', 'Great phone', 'Photos/fdf.jpg', 6);
+INSERT INTO `Products`(`sellerid`, `price`, `label`, `category`, `description`, `photo`, `stock`) VALUES(1, 15.12, 'iPhone 5', 'phones', 'Great phone', 'Photos/fdf.jpg', 6);
 
 CREATE TABLE `Trade` (
 	`tradeid` INT(10) AUTO_INCREMENT NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE `Trade` (
     CONSTRAINT ck_count CHECK(`count` > 0)
 );
 
-INSERT INTO `Trade`(`productid`, `userid`, `count`) VALUES(3, 1, 5);
+INSERT INTO `Trade`(`productid`, `userid`, `count`) VALUES(1, 1, 5);
 
 CREATE TABLE `Comments`(
 	`commentid` INT(10) AUTO_INCREMENT NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE `Comments`(
     CONSTRAINT ck_body CHECK(LEN(`postDate`) > 1)
 );
 
-INSERT INTO `Comments`(`productid`, `userid`, `body`) VALUES(3, 1, 'This is the first ever comment!');
+INSERT INTO `Comments`(`productid`, `userid`, `body`) VALUES(1, 1, 'This is the first ever comment!');
 
 CREATE TABLE `Log`(
 	`actionid` INT(10) AUTO_INCREMENT NOT NULL,
