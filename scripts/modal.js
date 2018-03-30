@@ -52,10 +52,20 @@ window.addEventListener('load', function() {
 	
 	loginForm.addEventListener('submit', function(e) {
 		e.preventDefault();
+
 	});
 	
 	contactForm.addEventListener('submit', function(e) {
 		e.preventDefault();
+		let message = {
+			username: this.childNodes[1].value,
+			subject: this.childNodes[3].value,
+			body: this.childNodes[5].value
+		}
+		
+		saveMessage(message);
+		
+		closeModal(contactModalBG);
 	});
 	
 	function openModal(modalBG) {		

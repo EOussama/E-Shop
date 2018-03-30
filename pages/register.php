@@ -10,11 +10,11 @@
 					<input type="password" placeholder="Password confirmation" class="textbox blue form-control" required>
 					<input type="email" placeholder="E-mail" class="textbox blue form-control" required>
 					<input type="text" placeholder="Location" class="textbox blue form-control" required>
-					<select name="" id="" class="combobox lg form-control">
-						<option value="">Individual</option>
-						<option value="">Professional</option>
+					<select class="combobox lg form-control">
+						<option>Individual</option>
+						<option>Professional</option>
 					</select>
-					<input type="file" class="form-control">
+					<input type="file" class="file-browse form-control">
 					<input type="tel" placeholder="Téléphone" class="textbox blue form-control" required>
 					<textarea name="" id="" placeholder="Description" class="textbox blue form-control"></textarea>
 					<label class="checkbox blue">

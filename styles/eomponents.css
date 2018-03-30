@@ -618,10 +618,50 @@ select.combobox.xm {
 	font-size: 12px;
 }
 
+/*--------------------------[File Browse]--------------------------*/
+input[type="file"].file-browse::-webkit-file-upload-button {
+	padding: 6px 8px;
+	margin: 2px;
+	font-size: 16px;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0px 2px 0.7px rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	color: var(--darkColor);
+	cursor: pointer;
+	transition-property: background-color, transform;
+	transition-duration: .5s, .05s;
+}
+
+input[type="file"].file-browse {
+	border-radius: 3px;
+	background-color: var(--lightColorLighten);
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+input[type="file"].file-browse:hover { background-color: var(--lightColor); }
+input[type="file"].file-browse::-webkit-file-upload-button:hover { background-color: var(--lightColorDarken); }
+
 /*---------------------------[Checkbox]----------------------------*/
 label.checkbox input { display: none; }
 
 label.checkbox input:checked + div.inner { background-color: var(--lightColorStrong); }
+label.checkbox input:checked + div.inner::before { display: block; }
+
+label.checkbox div.inner::before {
+	content: "\2714";
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-55%, -50%);
+	font-size: 12px;
+	font-weight: bold;
+	color: var(--lightColorLighten);
+	animation-name: checkBoxChecked;
+	animation-duration: 0.3s;
+}
 
 label.checkbox div.inner {
 	position: relative;
@@ -634,12 +674,17 @@ label.checkbox div.inner {
 	cursor: pointer;
 	transition-property: background-color;
 	transition-duration: .5s;
-
 }
 
 label.checkbox input:disabled + div.inner {
 	background-color: var(--disabledColor);
 	cursor: not-allowed;
+}
+
+@keyframes checkBoxChecked {
+	0% { font-size: 4px; }
+	75% { font-size: 14px; }
+	100% { font-size: 12px; }
 }
 
 label.checkbox.dark input:checked + div.inner { background-color: var(--darkColorLighten); }
@@ -1132,92 +1177,126 @@ span.cig {
 	color: var(--darkColor);
 	background-color: white;
 	border-radius: 5px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
 }
+
+span.cig.cursor { cursor: pointer; }
+span.cig.disabled.cursor { cursor: not-allowed; }
 
 span.cig.pill { border-radius: 20px; }
 
-.light span.cig { color: var(--darkColor); }
-.dark span.cig { color: var(--darkColor); }
-.blue span.cig { color: var(--blueColor); }
-.gray span.cig { color: var(--grayColor); }
-.green span.cig { color: var(--greenColor); }
-.aqua span.cig { color: var(--aquaColor); }
-.yellow span.cig { color: var(--yellowColor); }
-.red span.cig { color: var(--redColor); }
-.orange span.cig { color: var(--orangeColor); }
-.pink span.cig { color: var(--pinkColor); }
-.violet span.cig { color: var(--violetColor); }
-.brown span.cig { color: var(--brownColor); }
-:disabled span.cig { color: var(--disabledColor); }
+span.cig.light  { color: var(--darkColor); }
+span.cig.dark { color: var(--darkColor); }
+span.cig.blue { color: var(--blueColor); }
+span.cig.gray { color: var(--grayColor); }
+span.cig.green { color: var(--greenColor); }
+span.cig.aqua { color: var(--aquaColor); }
+span.cig.yellow { color: var(--yellowColor); }
+span.cig.red { color: var(--redColor); }
+span.cig.orange { color: var(--orangeColor); }
+span.cig.pink { color: var(--pinkColor); }
+span.cig.violet { color: var(--violetColor); }
+span.cig.brown { color: var(--brownColor); }
+span.cig.disabled { color: var(--disabledColor); }
 
 span.cig.invert {
 	color: white;
 	background-color: var(--darkColor);
 }
 
-.light span.cig.invert {
+span.cig.light.invert {
 	color: var(--lightColor);
 	background-color: var(--darkColor);
 }
 
-.dark span.cig.invert {
+span.cig.dark.invert {
 	color: var(--darkColor);
 	background-color: var(--lightColor);
 }
 
-.blue span.cig.invert {
+span.cig.blue.invert {
 	color: var(--lightColor);
 	background-color: var(--blueColor);
 }
 
-.gray span.cig.invert {
+span.cig.gray.invert {
 	color: var(--lightColor);
 	background-color: var(--grayColor);
 }
 
-.green span.cig.invert {
+span.cig.green.invert {
 	color: var(--lightColor);
 	background-color: var(--greenColor);
 }
 
-.aqua span.cig.invert {
+span.cig.aqua.invert {
 	color: var(--lightColor);
 	background-color: var(--aquaColor);
 }
 
-.yellow span.cig.invert {
+span.cig.yellow.invert {
 	color: var(--lightColor);
 	background-color: var(--yellowColor);
 }
 
-.red span.cig.invert {
+span.cig.red.invert {
 	color: var(--lightColor);
 	background-color: var(--redColor);
 }
 
-.orange span.cig.invert {
+span.cig.orange.invert {
 	color: var(--lightColor);
 	background-color: var(--orangeColor);
 }
 
-.pink span.cig.invert {
+span.cig.pink.invert {
 	color: var(--lightColor);
 	background-color: var(--pinkColor);
 }
 
-.violet span.cig.invert {
+span.cig.violet.invert {
 	color: var(--lightColor);
 	background-color: var(--violetColor);
 }
 
-.brown span.cig.invert {
+span.cig.brown.invert {
 	color: var(--lightColor);
 	background-color: var(--brownColor);
 }
 
-:disabled span.cig.invert {
+span.cig.disabled.invert {
 	color: var(--lightColor);
 	background-color: var(--disabledColor);
+}
+
+/*Cig sizing*/
+span.cig.xl {
+	padding: 9px;
+	font-size: 1.0em;
+}
+
+span.cig.lg {
+	padding: 7px;
+	font-size: 0.9em;
+}
+
+span.cig.md {
+	padding: 5px;
+	font-size: 0.8em;
+}
+
+span.cig.sm {
+	padding: 4px;
+	font-size: 0.7em;
+}
+
+span.cig.xm {
+	padding: 3px;
+	font-size: 0.65em;
 }
 
 /*---------------------------[Margin]---------------------------*/
@@ -1460,6 +1539,67 @@ ul.list, ol.list {
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+ul.list.select li {
+	cursor: pointer;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+ul.list.select li:hover { background-color: var(--lightColorLighten); }
+
+ul.list.light { background-color: var(--lightColor); }
+ul.list.light li { border-color: var(--lightColorDarken); }
+ul.list.light.select li:hover { background-color: var(--lightColorLighten); }
+
+ul.list.dark { background-color: var(--darkColor); }
+ul.list.dark li { border-color: var(--darkColorDarken); }
+ul.list.dark.select li:hover { background-color: var(--darkColorLighten); }
+
+ul.list.blue { background-color: var(--blueColor); }
+ul.list.blue li { border-color: var(--blueColorDarken); }
+ul.list.blue.select li:hover { background-color: var(--blueColorLighten); }
+
+ul.list.gray { background-color: var(--grayColor); }
+ul.list.gray li { border-color: var(--grayColorDarken); }
+ul.list.gray.select li:hover { background-color: var(--grayColorLighten); }
+
+ul.list.green { background-color: var(--greenColor); }
+ul.list.green li { border-color: var(--greenColorDarken); }
+ul.list.green.select li:hover { background-color: var(--greenColorLighten); }
+
+ul.list.yellow { background-color: var(--yellowColor); }
+ul.list.yellow li { border-color: var(--yellowColorDarken); }
+ul.list.yellow.select li:hover { background-color: var(--yellowColorLighten); }
+
+ul.list.red { background-color: var(--redColor); }
+ul.list.red li { border-color: var(--redColorDarken); }
+ul.list.red.select li:hover { background-color: var(--redColorLighten); }
+
+ul.list.orange { background-color: var(--orangeColor); }
+ul.list.orange li { border-color: var(--orangeColorDarken); }
+ul.list.orange.select li:hover { background-color: var(--orangeColorLighten); }
+
+ul.list.pink { background-color: var(--pinkColor); }
+ul.list.pink li { border-color: var(--pinkColorDarken); }
+ul.list.pink.select li:hover { background-color: var(--pinkColorLighten); }
+
+ul.list.violet { background-color: var(--violetColor); }
+ul.list.violet li { border-color: var(--violetColorDarken); }
+ul.list.violet.select li:hover { background-color: var(--violetColorLighten); }
+
+ul.list.brown { background-color: var(--brownColor); }
+ul.list.brown li { border-color: var(--brownColorDarken); }
+ul.list.brown.select li:hover { background-color: var(--brownColorLighten); }
+
+ul.list.disabled { background-color: var(--disabledColor); }
+
+ul.list.disabled li {
+	border-color: var(--disabledColorDarken);
+	cursor: not-allowed;
+}
+
+ul.list.disabled.select li:hover { background-color: var(--disabledColor); }
+
 li.list-item {
 	padding: 10px;
 	border: 1px solid var(--lightColor);
@@ -1477,7 +1617,6 @@ nav.navbar {
 	overflow: hidden;
 	background-color: var(--lightColor);
 	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-	z-index: 96;
 }
 
 ul.navitems { list-style-type: none; }
@@ -1617,10 +1756,48 @@ nav.navbar.fixed {
 nav.navbar.fixed + header { margin-top: 50px; }
 
 /*-------------------------[Forms]--------------------------*/
-form.from-group {
-	width: 100%;
+form.from-group { width: 100%; }
+
+form.form-group input.form-control, form.form-group select.form-control, form.form-group textarea.form-control, form.form-group button.form-control { width: 100%; }
+
+/*--------------------------[Text]--------------------------*/
+.text-bold { font-weight: bold; }
+.text-italic { font-style: italic; }
+.text-strikethrough { text-decoration: line-through; }
+.text-underline { text-decoration: underline; }
+.text-overline { text-decoration: overline; }
+
+.text-light { color: var(--lightColor); }
+.text-dark { color: var(--darkColor); }
+.text-blue { color: var(--blueColor); }
+.text-gray { color: var(--grayColor); }
+.text-green { color: var(--greenColor); }
+.text-yellow { color: var(--yellowColor); }
+.text-red { color: var(--redColor); }
+.text-orange { color: var(--orangeColor); }
+.text-pink { color: var(--pinkColor); }
+.text-violet { color: var(--violetColor); }
+.text-brown { color: var(--brownColor); }
+
+.text-disabled {
+	color: var(--disabledColor);
+	cursor: not-allowed;
 }
 
-form.form-group input.form-control, form.form-group select.form-control, form.form-group textarea.form-control {
-	width: 100%;
+/*------------------------[Background]------------------------*/
+.bg-light { background-color: var(--lightColor); }
+.bg-dark { background-color: var(--darkColor); }
+.bg-blue { background-color: var(--blueColor); }
+.bg-gray { background-color: var(--grayColor); }
+.bg-green { background-color: var(--greenColor); }
+.bg-yellow { background-color: var(--yellowColor); }
+.bg-red { background-color: var(--redColor); }
+.bg-orange { background-color: var(--orangeColor); }
+.bg-pink { background-color: var(--pinkColor); }
+.bg-violet { background-color: var(--violetColor); }
+.bg-brown { background-color: var(--brownColor); }
+
+.bg-disabled {
+	background-color: var(--disabledColor);
+	cursor: not-allowed;
 }

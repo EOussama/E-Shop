@@ -83,3 +83,14 @@ CREATE TABLE `Log`(
 );
 
 INSERT INTO `Log`(`actionDesc`) VALUES('Oussama has created the database!');
+
+CREATE TABLE `messages`(
+	`msgid` INT(8) NOT NULL AUTO_INCREMENT,
+	`username` NVARCHAR(25) NOT NULL,
+    `subject` NVARCHAR(30) NOT NULL,
+    `message` TEXT,
+    
+    CONSTRAINT pk_id PRIMARY KEY(`msgid`)
+);
+
+INSERT INTO `messages`(`username`, `subject`, `message`) VALUES('Oussama', 'Greetings', 'I lvoe your website folks!');

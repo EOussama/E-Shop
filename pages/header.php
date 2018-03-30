@@ -9,10 +9,10 @@
         <meta name="description" content="A simple e-shop website with few social media interactions where you can trade goods or see what's on the market.">
         <meta name="keywords" content="e-shop, shop, trade, buy, sell, shopping">
 
-       	<link href="<?php echo '\\E-Shop\fonts\fontawesome-free-5.0.8\css\fontawesome-all.min.css'; ?>" rel="stylesheet" type="text/css">
-        <link href="<?php echo '\\E-Shop\styles\eomponents.css'; ?>" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="<?php echo '\\E-Shop\styles\main.css'; ?>">
-        <link rel="icon" type="image/png" href="<?php echo '\\E-Shop\images\favicon.png'; ?>">
+       	<link href="<?php echo '\E-Shop\fonts\fontawesome-free-5.0.8\css\fontawesome-all.min.css'; ?>" rel="stylesheet" type="text/css">
+        <link href="<?php echo '\E-Shop\styles\eomponents.css'; ?>" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="<?php echo '\E-Shop\styles\main.css'; ?>">
+        <link rel="icon" type="image/png" href="<?php echo '\E-Shop\images\favicon.png'; ?>">
 
         <title>E-Shop</title>
     </head>
@@ -60,7 +60,7 @@
 					<h4 class="lead"><i class="fas fa-envelope"></i> Contact us</h4>
 					<i class="fas fa-times fa-lg" id="contactModalCloseBtn"></i>
 				</div>
-				<form id="contactForm" class="contactForm form-group">
+				<form id="contactForm" class="contactForm form-group" action="\E-Shop\utils\savemessage.php" method="post">
 					<input type="text" class="textbox blue xl form-control" placeholder="Username" maxlength="25" required >
 					<input type="text" class="textbox blue xl form-control" placeholder="Subject" maxlength="30" required >
 					<textarea class="textbox blue xl form-control" placeholder="Message" maxlength="500" required></textarea>
