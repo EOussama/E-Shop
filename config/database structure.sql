@@ -93,4 +93,4 @@ CREATE TABLE `Messages`(
     CONSTRAINT pk_id PRIMARY KEY(`msgid`)
 );
 
-INSERT INTO `Messages`(`username`, `subject`, `message`) VALUES('Oussama', 'Greetings', 'I lvoe your website folks!');
+INSERT INTO `Messages`(`username`, `subject`, `message`) VALUES('Oussama', 'Greetings', 'I love your website folks!');

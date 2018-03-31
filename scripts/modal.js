@@ -10,7 +10,11 @@ window.addEventListener('load', function() {
 		contactModalCloseBtn = document.getElementById('contactModalCloseBtn'),
 		contactForm = document.getElementById('contactForm'),
 		contactModalOpenBtn = document.getElementById('contactModalOpenBtn'),
-		sideMenuContactModalOpenBtn = document.getElementById('sideMenuContactModalOpenBtn');
+		sideMenuContactModalOpenBtn = document.getElementById('sideMenuContactModalOpenBtn'),
+		useTermsModalBG = document.getElementById('useTermsModalBG'),
+		useTermsModal = document.getElementById('useTermsModal'),
+		useTermsModalOpenBtn = document.getElementById('useTermsModalOpenBtn'),
+		useTermsModalCloseBtn = document.getElementById('useTermsModalCloseBtn');
 	
 	loginModalOpenBtn.addEventListener('click', function() {
 		if(isModalOpened(loginModalBG))
@@ -24,6 +28,13 @@ window.addEventListener('load', function() {
 			closeModal(contactModalBG);
 		else
 			openModal(contactModalBG);
+	});
+	
+	useTermsModalOpenBtn.addEventListener('click', function() {
+		if(isModalOpened(useTermsModalBG))
+			closeModal(useTermsModalBG);
+		else
+			openModal(useTermsModalBG);
 	});
 	
 	sideMenuContactModalOpenBtn.addEventListener('click', function(e) {
@@ -43,11 +54,17 @@ window.addEventListener('load', function() {
 		closeModal(contactModalBG);
 	});
 	
+	useTermsModalCloseBtn.addEventListener('click', function() {
+		closeModal(useTermsModalBG);
+	});
+	
 	window.addEventListener('click', function(e) {
 		if(e.target == loginModalBG)
 			closeModal(loginModalBG);
 		else if(e.target == contactModalBG)
 			closeModal(contactModalBG);
+		else if(e.target == useTermsModalBG)
+			closeModal(useTermsModalBG);
 	});
 	
 	loginForm.addEventListener('submit', function(e) {

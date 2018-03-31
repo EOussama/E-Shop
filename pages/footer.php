@@ -64,5 +64,6 @@
         <script type="text/javascript" src="\E-Shop\scripts\modal.js"></script>
         <script type="text/javascript" src="\E-Shop\scripts\sideMenu.js"></script>
         <script type="text/javascript" src="\E-Shop\scripts\main.js"></script>
+        <div id="useTermsModalOpenBtn"></div>
     </body>
 </html>

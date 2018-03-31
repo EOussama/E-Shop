@@ -1,6 +1,6 @@
 <?php 
 	require 'header.php';
-?>        
+?>      
         <main class="container">
         	<div class="fold" style="width: 600px; margin: auto;">
         		<h2 class="lead">Registration form</h2>
@@ -18,7 +18,7 @@
 					<input type="tel" placeholder="Téléphone" class="textbox blue form-control" required>
 					<textarea name="" id="" placeholder="Description" class="textbox blue form-control"></textarea>
 					<label class="checkbox blue">
-						<span>I accept the <a href="javascript:void(0)">conditions and terms</a> of use</span>
+						<span>I accept the <a id="useTermsModalOpenBtn" href="javascript:void(0)">conditions and terms</a> of use</span>
 						<input type="checkbox" required>
 						<div class="inner"></div>
 					</label>

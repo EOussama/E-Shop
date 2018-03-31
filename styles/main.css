@@ -144,7 +144,7 @@ div.modalBG div.fold div.fold-header h4 {
 	display: inline-block;
 }
 
-#loginModalCloseBtn, #contactModalCloseBtn {
+#loginModalCloseBtn, #contactModalCloseBtn, #useTermsModalCloseBtn {
 	float: right;
 	cursor: pointer;
 	font-size: 30px;
