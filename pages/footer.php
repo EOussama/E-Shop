@@ -24,28 +24,34 @@
 				<h2><i class="fas fa-user"></i> Creators</h2>
 				<div id="creatorCards" class="flex">
 					<div class="fold creatorCard">
-						<h3>Redouan Andalousi</h3>
-						<ul class="list">
-							<a href="https://www.facebook.com/andaloussir" target="_blank"><li><i class="fab fa-facebook"></i> Facebook</li></a>
-							<a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><li><i class="fab fa-google"></i> Gmail</li></a>
-							<a href="https://www.linkedin.com/in/andaloussir" target="_blank"><li><i class="fab fa-linkedin"></i> LinkedIn</li></a>
-						</ul>
+						<div class="fold-body">
+							<h3>Redouan Andalousi</h3>
+							<ul class="list">
+								<a href="https://www.facebook.com/andaloussir" target="_blank"><li><i class="fab fa-facebook"></i> Facebook</li></a>
+								<a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><li><i class="fab fa-google"></i> Gmail</li></a>
+								<a href="https://www.linkedin.com/in/andaloussir" target="_blank"><li><i class="fab fa-linkedin"></i> LinkedIn</li></a>
+							</ul>
+						</div>
 					</div>
 					<div class="fold creatorCard">
-						<h3>Oussama Essamadi</h3>
-						<ul class="list">
-							<a href="https://www.facebook.com/oussama.essamadi" target="_blank"><li><i class="fab fa-facebook"></i> Facebook</li></a>
-							<a href="https://plus.google.com/u/0/+eoussama" target="_blank"><li><i class="fab fa-google"></i> Gmail</li></a>
-							<a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><li><i class="fab fa-linkedin"></i> LinkedIn</li></a>
-						</ul>
+						<div class="fold-body">
+							<h3>Oussama Essamadi</h3>
+							<ul class="list">
+								<a href="https://www.facebook.com/oussama.essamadi" target="_blank"><li><i class="fab fa-facebook"></i> Facebook</li></a>
+								<a href="https://plus.google.com/u/0/+eoussama" target="_blank"><li><i class="fab fa-google"></i> Gmail</li></a>
+								<a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><li><i class="fab fa-linkedin"></i> LinkedIn</li></a>
+							</ul>
+						</div>
 					</div>
 					<div class="fold creatorCard">
-						<h3>Rachid Lwajdi</h3>
-						<ul class="list">
-							<a href="https://www.facebook.com/rachid.louajdim" target="_blank"><li><i class="fab fa-facebook"></i> Facebook</li></a>
-							<a href="www.facebook.com" target="_blank"><li><i class="fab fa-google"></i> Gmail</li></a>
-							<a href="www.facebook.com" target="_blank"><li><i class="fab fa-linkedin"></i> LinkedIn</li></a>
-						</ul>
+						<div class="fold-body">
+							<h3>Rachid Lwajdi</h3>
+							<ul class="list">
+								<a href="https://www.facebook.com/rachid.louajdim" target="_blank"><li><i class="fab fa-facebook"></i> Facebook</li></a>
+								<a href="www.facebook.com" target="_blank"><li><i class="fab fa-google"></i> Gmail</li></a>
+								<a href="www.facebook.com" target="_blank"><li><i class="fab fa-linkedin"></i> LinkedIn</li></a>
+							</ul>
+						</div>
 					</div>
 				</div>
      	 		<br><hr style="margin-top: 10px;">

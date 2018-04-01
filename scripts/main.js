@@ -1,22 +1,12 @@
 window.addEventListener('load', function() {
 	const
-		navbar = document.getElementById('navbar'),
 		scrollBtn = document.getElementById('scrollBtn'),
 		aboutBtn = document.getElementById('aboutBtn'),
 		sideMenuAboutBtn = document.getElementById('sideMenuAboutBtn')
 		footer = document.getElementsByTagName('footer')[0],
 		navbarOffset = navbar.offsetTop;
 	
-	window.addEventListener('scroll', function() {
-		if(window.pageYOffset >= navbarOffset) {
-			navbar.classList.add('fixed');
-			scrollBtn.style.display = 'block';
-		} else {
-			navbar.classList.remove('fixed');
-			scrollBtn.style.display = 'none';
-			
-		}
-	});
+	window.addEventListener('scroll', () => scrollBtn.style.display = window.pageYOffset >= navbarOffset ? 'block' : 'none');
 	
 	aboutBtn.addEventListener('click', function() {
 		const

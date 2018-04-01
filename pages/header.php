@@ -45,12 +45,14 @@
 					<h4 class="lead"><i class="fas fa-sign-in-alt"></i> Login</h4>
 					<i class="fas fa-times fa-lg" id="loginModalCloseBtn"></i>
 				</div>
-				<form id="loginForm" class="loginForm form-group">
-					<input type="text" name="username" class="textbox blue xl form-control" placeholder="Username" maxlength="25" required >
-					<input type="password" name="password" class="textbox blue xl form-control" placeholder="Password" minlength="8" maxlength="30" required >
-					<input type="submit" value="Login" class="btn blue">
-					<input type="reset" value="Clear" class="btn gray">
-				</form>
+				<div class="fold-body">
+					<form id="loginForm" class="loginForm form-group">
+						<input type="text" name="username" class="textbox blue xl form-control" placeholder="Username" maxlength="25" required >
+						<input type="password" name="password" class="textbox blue xl form-control" placeholder="Password" minlength="8" maxlength="30" required >
+						<input type="submit" value="Login" class="btn blue">
+						<input type="reset" value="Clear" class="btn gray">
+					</form>
+				</div>
 			</div>
 		</div>
        
@@ -60,13 +62,15 @@
 					<h4 class="lead"><i class="fas fa-envelope"></i> Contact us</h4>
 					<i class="fas fa-times fa-lg" id="contactModalCloseBtn"></i>
 				</div>
-				<form id="contactForm" class="contactForm form-group" action="\E-Shop\utils\savemessage.php" method="post">
-					<input type="text" class="textbox blue xl form-control" placeholder="Username" maxlength="25" required >
-					<input type="text" class="textbox blue xl form-control" placeholder="Subject" maxlength="30" required >
-					<textarea class="textbox blue xl form-control" placeholder="Message" maxlength="500" required></textarea>
-					<input type="submit" value="Send" class="btn blue">
-					<input type="reset" value="Clear" class="btn gray">
-				</form>
+				<div class="fold-body">
+					<form id="contactForm" class="contactForm form-group" action="\E-Shop\utils\savemessage.php" method="post">
+						<input type="text" class="textbox blue xl form-control" placeholder="Username" maxlength="25" required >
+						<input type="text" class="textbox blue xl form-control" placeholder="Subject" maxlength="30" required >
+						<textarea class="textbox blue xl form-control" placeholder="Message" maxlength="500" required></textarea>
+						<input type="submit" value="Send" class="btn blue">
+						<input type="reset" value="Clear" class="btn gray">
+					</form>
+				</div>
 			</div>
 		</div>
        	<div class="modalBG" id="useTermsModalBG">
@@ -282,7 +286,7 @@
         	<h1>E-shop</h1>
         	<small>Step up your shopping</small>
         </header>
-        <nav id="navbar" class="navbar dark">
+        <nav id="navbar" class="navbar dark sticky">
         	<ul class="navitems">
         		<a href="javascript:void(0)">
         			<li id="burgerBtn" class="navitem"><i class="fas fa-bars fa-lg"></i></li>
