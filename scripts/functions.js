@@ -6,7 +6,7 @@ function saveMessage(message) {
 	xhr.send(`username=${message.username}&subject=${message.subject}&body=${message.body}`);
 }
 
-function registeruser(user) {
+function registerUser(user) {
 	let xhr = new XMLHttpRequest();
 	
 	xhr.open('POST', "\\E-Shop\\utils\\registeruser.php", true);
