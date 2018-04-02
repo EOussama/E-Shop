@@ -996,12 +996,49 @@ div.landleg .lead, header.landleg .lead {
 .grid.grid-elements-11 { grid-template-columns: repeat(11, 1fr); }
 .grid.grid-elements-12 { grid-template-columns: repeat(12, 1fr); }
 
-.grid.grip-gap-1 { grid-column-gap: 1em; }
-.grid.grip-gap-2 { grid-column-gap: 2em; }
-.grid.grip-gap-3 { grid-column-gap: 3em; }
-.grid.grip-gap-4 { grid-column-gap: 4em; }
-.grid.grip-gap-5 { grid-column-gap: 5em; }
-.grid.grip-gap-6 { grid-column-gap: 6em; }
+.grid.grid-column-gap-1 { grid-column-gap: 1em; }
+.grid.grid-column-gap-2 { grid-column-gap: 2em; }
+.grid.grid-column-gap-3 { grid-column-gap: 3em; }
+.grid.grid-column-gap-4 { grid-column-gap: 4em; }
+.grid.grid-column-gap-5 { grid-column-gap: 5em; }
+.grid.grid-column-gap-6 { grid-column-gap: 6em; }
+
+.grid.grid-row-gap-1 { grid-row-gap: 1em; }
+.grid.grid-row-gap-2 { grid-row-gap: 2em; }
+.grid.grid-row-gap-3 { grid-row-gap: 3em; }
+.grid.grid-row-gap-4 { grid-row-gap: 4em; }
+.grid.grid-row-gap-5 { grid-row-gap: 5em; }
+.grid.grid-row-gap-6 { grid-row-gap: 6em; }
+
+.grid.grid-gap-1 { 
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+}
+
+.grid.grid-gap-2 { 
+	grid-column-gap: 2em;
+	grid-row-gap: 2em;
+}
+
+.grid.grid-gap-3 { 
+	grid-column-gap: 3em;
+	grid-row-gap: 3em;
+}
+
+.grid.grid-gap-4 { 
+	grid-column-gap: 4em;
+	grid-row-gap: 4em;
+}
+
+.grid.grid-gap-5 { 
+	grid-column-gap: 5em;
+	grid-row-gap: 5em;
+}
+
+.grid.grid-gap-6 { 
+	grid-column-gap: 6em;
+	grid-row-gap: 6em;
+}
 
 /*-------------------------------[hr]-------------------------------*/
 hr {
@@ -1395,10 +1432,15 @@ span.cig.xm {
 .mb-1 { margin-bottom: 1em; }
 .mb-2 { margin-bottom: 2em; }
 .mb-3 { margin-bottom: 3em; }
-
 .margin-1 { margin: 1em; }
 .margin-2 { margin: 2em; }
 .margin-3 { margin: 3em; }
+
+.mb-reset { margin-bottom: 0px !important; }
+.mt-reset { margin-top: 0px !important; }
+.ml-reset { margin-left: 0px !important; }
+.mr-reset { margin-right: 0px !important; }
+.margin-reset { margin: 0px !important; }
 
 /*--------------------------[Padding]---------------------------*/
 .pl-1 { padding-left: 1em; }
@@ -1413,10 +1455,15 @@ span.cig.xm {
 .pb-1 { padding-bottom: 1em; }
 .pb-2 { padding-bottom: 2em; }
 .pb-3 { padding-bottom: 3em; }
-
 .padding-1 { padding: 1em; }
 .padding-2 { padding: 2em; }
 .padding-3 { padding: 3em; }
+
+.pb-reset { padding-bottom: 0px !important; }
+.pt-reset { padding-top: 0px !important; }
+.pl-reset { padding-left: 0px !important; }
+.pr-reset { padding-right: 0px !important; }
+.padding-reset { padding: 0px !important; }
 
 /*---------------------------[table]----------------------------*/
 table.table {
@@ -2113,7 +2160,7 @@ div.breadcrumb ul li:not(:last-child)::after {
 div.breadcrumb ul li.active a { color: var(--darkColor); }
 
 /*------------------------[Progress Bar]------------------------*/
-div.progresstrack {
+div.progressTrack {
 	position: relative;
 	width: 100%;
 	height: 20px;
@@ -2122,7 +2169,7 @@ div.progresstrack {
 	overflow-x: hidden;
 }
 
-div.progresstrack div.progressbar {
+div.progressTrack div.progressBar {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -2133,7 +2180,7 @@ div.progresstrack div.progressbar {
 	overflow: hidden;
 }
 
-div.progresstrack.stripped div.progressbar::before {
+div.progressTrack.stripped div.progressBar::before {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -2148,25 +2195,25 @@ div.progresstrack.stripped div.progressbar::before {
 	opacity: 0.5;
 }
 
-div.progresstrack.stripped.stripped-animation div.progressbar::before {
+div.progressTrack.stripped.stripped-animation div.progressBar::before {
 	animation-name: slideStrippes;
-	animation-duration: 2s;
+	animation-duration: 20s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
 
 @keyframes slideStrippes {
 	from { background-position: 0px 0px; }
-	to { background-position: 29px 0px; }
+	to { background-position: 100vw; }
 }
 
-div.progresstrack.animation div.progressbar{
+div.progressTrack.animation div.progressBar{
 	transition-property: width;
 	transition-duration: .3s;
 	transition-timing-function: ease-in-out;
 }
 
-div.progresstrack div.progressbar span.progressValue {
+div.progressTrack div.progressBar span.progressValue {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2176,21 +2223,21 @@ div.progresstrack div.progressbar span.progressValue {
 	font-size: 14px;
 }
 
-div.progresstrack div.progressbar span.progressValue::after { content: '%';}
+div.progressTrack div.progressBar span.progressValue::after { content: '%';}
 
-div.progresstrack.pill { border-radius: 10px; }
+div.progressTrack.pill { border-radius: 10px; }
 
-div.progresstrack.xm { height: 2px; }
-div.progresstrack.xm div.progressbar span.progressValue { display: none; }
+div.progressTrack.xm { height: 2px; }
+div.progressTrack.xm div.progressBar span.progressValue { display: none; }
 
-div.progresstrack.sm { height: 15px; }
-div.progresstrack.sm div.progressbar span.progressValue { font-size: 12px; }
+div.progressTrack.sm { height: 15px; }
+div.progressTrack.sm div.progressBar span.progressValue { font-size: 12px; }
 
-div.progresstrack.md { height: 20px; }
-div.progresstrack.xl div.progressbar span.progressValue { font-size: 14px; }
+div.progressTrack.md { height: 20px; }
+div.progressTrack.xl div.progressBar span.progressValue { font-size: 14px; }
 
-div.progresstrack.lg { height: 25px; }
-div.progresstrack.xl div.progressbar span.progressValue { font-size: 15px; }
+div.progressTrack.lg { height: 25px; }
+div.progressTrack.xl div.progressBar span.progressValue { font-size: 15px; }
 
-div.progresstrack.xl { height: 30px; }
-div.progresstrack.xl div.progressbar span.progressValue { font-size: 16px; }
+div.progressTrack.xl { height: 30px; }
+div.progressTrack.xl div.progressBar span.progressValue { font-size: 16px; }

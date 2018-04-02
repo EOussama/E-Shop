@@ -41,7 +41,7 @@
     	</div>
 		<div class="modalBG" id="loginModalBG">
 			<div class="fold light">
-				<div class="fold-header">
+				<div class="fold-header pb-reset">
 					<h4 class="lead"><i class="fas fa-sign-in-alt"></i> Login</h4>
 					<i class="fas fa-times fa-lg" id="loginModalCloseBtn"></i>
 				</div>
@@ -58,7 +58,7 @@
        
        	<div class="modalBG" id="contactModalBG">
 			<div class="fold light">
-				<div class="fold-header">
+				<div class="fold-header pb-reset">
 					<h4 class="lead"><i class="fas fa-envelope"></i> Contact us</h4>
 					<i class="fas fa-times fa-lg" id="contactModalCloseBtn"></i>
 				</div>
